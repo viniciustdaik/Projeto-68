@@ -8,7 +8,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import RideScreen from "../screens/Ride";
 import RideHistoryScreen from "../screens/RideHistory";
 
-import historicoimg from '../assets/historicoimg1.png';
+import historicoimg from '../assets/historicoimg2.png';
 
 const Tab = createBottomTabNavigator();
 
@@ -18,21 +18,22 @@ export default class BottomTabNavigator extends Component {
       <SafeAreaProvider>
         <NavigationContainer>
           <Tab.Navigator
-          screenOptions={{
+          tabBarOptions={{
             //tabBarOptions //screenOptions
-            /*style:{
-              backgroundColor: '#121212', 
+            style:{
+              backgroundColor: 'darkblue', 
               borderTopColor: 'transparent', 
             }, 
             activeTintColor: 'orange', 
+            inactiveTintColor: 'red', 
             tabStyle:{
               paddingBottom: 5, 
               paddingTop: 0, 
             }, 
-            showLabel: true, */
-            "tabBarActiveTintColor": "orange", //nao fez nada
+            showLabel: true, 
+            /*"tabBarActiveTintColor": "orange", //nao fez nada
             "tabBarShowLabel": false, 
-            "tabBarInactiveTintColor": "black", //nao fez nada
+            "tabBarInactiveTintColor": "red", //nao fez nada
             "tabBarItemStyle": {
               "paddingBottom": 5, 
               "paddingTop": 0, 
@@ -40,11 +41,11 @@ export default class BottomTabNavigator extends Component {
             "tabBarStyle": [
               {
                 "display": "flex", 
-                "backgroundColor": 'cyan', 
+                "backgroundColor": 'darkblue', 
                 "borderTopColor": 'transparent', 
               }, 
               null
-            ], 
+            ], */
           }}>
             {/*
             <TabScreen name="Alugue uma Bicicleta" component={RideScreen} />
@@ -83,8 +84,8 @@ export default class BottomTabNavigator extends Component {
                   <Image source={historicoimg}
                     resizeMode="contain"
                     style={{
-                      width: 35,  
-                      height: 35, 
+                      width: 30,  
+                      height: 30, 
                     }}/>
                     {/*<Text style={{ color: focused ? '#FFA500' : 'lightblue', fontSize: 25 }}>Transação</Text>*/}
                 </View>
